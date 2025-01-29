@@ -2,8 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import {NextIntlClientProvider} from "next-intl";
-import {getLocale, getMessages} from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,7 +18,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Vinicius Albuquerque",
-  description: "Hello there, my name is Vinicius and I am the frontend engineer that you are looking for",
+  description:
+    "Hello there, my name is Vinicius and I am the frontend engineer that you are looking for",
 };
 
 export default async function RootLayout({
@@ -27,7 +28,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const locale = await getLocale();
- 
+
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
