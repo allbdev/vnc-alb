@@ -1,12 +1,12 @@
 import React from "react";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { getLang } from "@/utils";
 import "@radix-ui/themes/styles.css";
-import { Theme } from "@radix-ui/themes";
+import { ThemeContextProvider } from "@/providers";
+import localFont from "next/font/local";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,11 +40,11 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Theme>
+        <ThemeContextProvider>
           <NextIntlClientProvider messages={messages}>
             {children}
           </NextIntlClientProvider>
-        </Theme>
+        </ThemeContextProvider>
       </body>
     </html>
   );

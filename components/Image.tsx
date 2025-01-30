@@ -16,8 +16,6 @@ export const Image: React.FC<ImageProps> = ({
     <NextImage
       className={cn("!object-cover !w-full !h-full", className)}
       fill={true}
-      // src="https://images.unsplash.com/photo-1535025183041-0991a977e25b?w=300&dpr=2&q=80"
-      // alt="Landscape photograph by Tobias Tullius"
       {...imageProps}
     />
   </AspectRatio>
