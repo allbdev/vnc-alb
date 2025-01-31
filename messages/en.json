@@ -1,5 +1,7 @@
 {
     "HomePage": {
-      "title": "Hello world!"
+      "based": "Based in<br></br>Espirito Santo, Brazil",
+      "email": "Say Hello<br></br>alb.develloper@gmail.com",
+      "switchMode": "Switch to<br></br>{mode} mode"
     }
   }

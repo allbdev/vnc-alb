@@ -17,7 +17,7 @@ interface ThemeContextProps {
   setTheme: Dispatch<SetStateAction<ThemeProps>>;
 }
 
-const ThemeContext = createContext<ThemeContextProps | null>(null);
+const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);
 
 const ThemeContextProvider: FC<PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = useState<ThemeProps>("dark");

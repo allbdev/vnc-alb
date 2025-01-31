@@ -1,6 +1,7 @@
 {
-  "extends": ["plugin:prettier/recommended", "next/core-web-vitals", "plugin:react/recommended"],
+  "extends": ["plugin:prettier/recommended", "next/core-web-vitals", "plugin:react/recommended", "plugin:tailwindcss/recommended"],
   "rules": {
-    "jsx-a11y/alt-text": "off"
+    "jsx-a11y/alt-text": "off",
+    "react/jsx-no-literals": "error"
   }
 }

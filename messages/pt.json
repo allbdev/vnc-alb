@@ -1,5 +1,7 @@
 {
     "HomePage": {
-      "title": "Ola Mundo!"
+      "based": "Moro em<br></br>Espirito Santo, Brasil",
+      "email": "Entre en contato<br></br>alb.develloper@gmail.com",
+      "switchMode": "Trocar para o<br></br>modo {mode}"
     }
   }

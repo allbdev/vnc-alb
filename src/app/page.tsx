@@ -1,20 +1,11 @@
 import React from "react";
-import { useTranslations } from "next-intl";
-import { Image } from "@/components/Image";
-import { Button } from "@radix-ui/themes";
+import { Header } from "@/components/Header";
 
 export default function Home() {
-  const t = useTranslations("HomePage");
   return (
-    <main>
-      <Button>{t("title")}</Button>
-      <Image
-        aspecRatioProps={{ ratio: 16 / 9 }}
-        imageProps={{
-          alt: "Landscape photograph by Tobias Tullius",
-          src: "/test.jpeg",
-        }}
-      />
-    </main>
+    <div className={"mx-auto w-[1020px] max-w-[90%]"}>
+      <Header />
+      <main></main>
+    </div>
   );
 }
