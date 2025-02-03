@@ -1,26 +1,14 @@
 "use client";
-import { useTheme } from "@/providers";
-import { setUserLocale } from "@/services/locale";
-import { Locale } from "@/src/i18n/config";
+import { useLocale } from "@/providers/locale";
+import { useTheme } from "@/providers/theme";
 import { useTranslations } from "next-intl";
-import React, { FC, useCallback } from "react";
+import React, { FC } from "react";
+import { LuLanguages } from "react-icons/lu";
 
 export const Header: FC = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, handleToggleTheme } = useTheme();
+  const { hangleToggleLocale } = useLocale();
   const t = useTranslations("HomePage");
-
-  const handleToggleTheme = useCallback(() => {
-    setTheme((prev) => {
-      if (prev === "light") {
-        return "dark";
-      }
-      return "light";
-    });
-  }, [setTheme]);
-
-  const hangleChangeLang = (locale: Locale) => {
-    setUserLocale(locale);
-  };
 
   return (
     <header className="flex flex-row justify-between pt-3">
@@ -43,15 +31,16 @@ export const Header: FC = () => {
             })}
           </span>
         </button>
-        <button onClick={() => hangleChangeLang("pt")}>pt</button>
-        <button onClick={() => hangleChangeLang("en")}>en</button>
+        <button onClick={hangleToggleLocale}>
+          <LuLanguages />
+        </button>
       </div>
       <nav className="flex flex-1 justify-end">
         <ul className="flex list-none flex-row gap-4">
           <li>ABOUT</li>
           <li>EXPERIENCE</li>
           <li>PROJECTS</li>
-          <li>CONTACT</li>
+          <li>TECNOLOGIES</li>
         </ul>
       </nav>
     </header>

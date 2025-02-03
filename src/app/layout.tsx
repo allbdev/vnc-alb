@@ -2,11 +2,14 @@ import React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import "@radix-ui/themes/styles.css";
-import { ThemeContextProvider } from "@/providers";
+import { ThemeContextProvider } from "@/providers/theme";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
+import { LocaleContextProvider } from "@/providers/locale";
+import { Locale } from "../i18n/config";
+import { getUserLocale } from "@/services/locale";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,7 +33,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
+  const locale = await getUserLocale();
 
   // Providing all messages to the client
   // side is the easiest way to get started
@@ -42,7 +45,9 @@ export default async function RootLayout({
       >
         <ThemeContextProvider>
           <NextIntlClientProvider messages={messages}>
-            {children}
+            <LocaleContextProvider defaultLocale={locale as Locale}>
+              {children}
+            </LocaleContextProvider>
           </NextIntlClientProvider>
         </ThemeContextProvider>
       </body>
