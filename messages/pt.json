@@ -1,7 +1,14 @@
 {
-    "HomePage": {
+    "header": {
       "based": "Moro em<br></br>Espirito Santo, Brasil",
-      "email": "Entre en contato<br></br>alb.develloper@gmail.com",
-      "switchMode": "Trocar para o<br></br>modo {mode}"
+      "email": "Entre em contato<br></br>alb.develloper@gmail.com",
+      "switchMode": "Trocar para o modo {mode}",
+      "switchLocale": "Trocar para EN-us",
+      "links": {
+        "1": "SOBRE",
+        "2": "EXPERIÊNCIA",
+        "3": "PROJETOS",
+        "4": "TECNOLOGIAS"
+      }
     }
   }
