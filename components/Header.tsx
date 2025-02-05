@@ -59,7 +59,7 @@ const BasedText: FC<{ className?: string }> = ({ className }) => {
   const t = useTranslations("header");
 
   return (
-    <span className={cn("block", className)}>
+    <span className={cn("block", className)} data-testid="based-span">
       {t.rich("based", {
         br: () => <br />,
       })}
