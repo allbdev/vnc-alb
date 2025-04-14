@@ -5,65 +5,15 @@ import { useTheme } from "@/providers/theme";
 import { Tooltip } from "@radix-ui/themes";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useMemo, useState } from "react";
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
-import { LuLanguages } from "react-icons/lu";
-import { SlMenu } from "react-icons/sl";
-import { TfiClose } from "react-icons/tfi";
+import { LuLanguages, LuMenu, LuX } from "react-icons/lu";
 
 export const Header: FC = () => {
   return (
-    <>
-      <header className="hidden flex-row justify-between pt-3 md:flex">
-        <div className="flex gap-10">
-          <BasedText />
-          <EmailButton />
-          <ThemeButton />
-          <LocaleButton />
-        </div>
-        <NavList isMobile={false} />
-      </header>
-      <MobileHeader />
-    </>
-  );
-};
-
-const MobileHeader: FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  return (
-    <div className="flex flex-col md:hidden">
-      <header className="flex flex-row justify-between pt-3">
-        <div className="flex gap-10">
-          <ThemeButton />
-          <LocaleButton />
-        </div>
-        <button onClick={() => setIsOpen((prev) => !prev)}>
-          {isOpen ? <TfiClose size={INCO_SIZE} /> : <SlMenu size={INCO_SIZE} />}
-        </button>
-      </header>
-      <div
-        className={cn(
-          "mt-4 flex-col item-center gap-4",
-          isOpen ? "flex" : "hidden",
-        )}
-      >
-        <BasedText className="text-center" />
-        <EmailButton className="text-center" />
-        <NavList isMobile />
-      </div>
-    </div>
-  );
-};
-
-const BasedText: FC<{ className?: string }> = ({ className }) => {
-  const t = useTranslations("header");
-
-  return (
-    <span className={cn("block", className)} data-testid="based-span">
-      {t.rich("based", {
-        br: () => <br />,
-      })}
-    </span>
+    <header className="flex pt-3">
+      <NavList />
+    </header>
   );
 };
 
@@ -105,30 +55,34 @@ const ThemeButton: FC = () => {
   );
 };
 
-const EmailButton: FC<{ className?: string }> = ({ className }) => {
+const NavList: FC = () => {
   const t = useTranslations("header");
-  return (
-    <button onClick={() => window.open("mailto:alb.develloper@gmail.com")}>
-      <span className={cn("block text-left", className)}>
-        {t.rich("email", {
-          br: () => <br />,
-        })}
-      </span>
-    </button>
-  );
-};
+  const liClassName = cn("text-center py-2");
+  const [isOpen, setIsOpen] = useState(false);
 
-const NavList: FC<{ isMobile: boolean }> = ({ isMobile }) => {
-  const t = useTranslations("header");
-  const liClassName = cn(isMobile && "text-center py-2");
+  const mobileClassNames = useMemo(
+    () => [
+      "list-none flex-col divide-y top-[100%] absolute left-0 right-0 ease-in md:sticky md:flex md:flex-row md:items-center md:gap-4 md:divide-y-0",
+      isOpen ? "flex" : "hidden",
+    ],
+    [isOpen],
+  );
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
+
   return (
-    <nav className={cn(!isMobile && "flex flex-1 justify-end")}>
-      <ul
-        className={cn(
-          "flex list-none",
-          !isMobile ? "flex-row items-center gap-4" : "flex-col divide-y",
-        )}
-      >
+    <nav className={"relative flex flex-1 items-center justify-between"}>
+      <h1>{t.rich("title")}</h1>
+      <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <LuX size={INCO_SIZE} /> : <LuMenu size={INCO_SIZE} />}
+      </button>
+      <ul className={cn(mobileClassNames)}>
         <li className={liClassName}>
           <Link href={"#about"}>{t.rich("links.1")}</Link>
         </li>
@@ -140,6 +94,10 @@ const NavList: FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </li>
         <li className={liClassName}>
           <Link href={"#tecnologies"}>{t.rich("links.4")}</Link>
+        </li>
+        <li className={cn(liClassName, "flex gap-4 justify-center")}>
+          <LocaleButton />
+          <ThemeButton />
         </li>
       </ul>
     </nav>
