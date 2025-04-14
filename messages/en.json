@@ -6,10 +6,10 @@
     "switchMode": "Switch to {mode} mode",
     "switchLocale": "Switch to PT-br",
     "links": {
-      "1": "ABOUT",
-      "2": "EXPERIENCE",
-      "3": "PROJECTS",
-      "4": "TECNOLOGIES"
+      "1": "About",
+      "2": "Experience",
+      "3": "Projects",
+      "4": "Technologies"
     }
   }
 }

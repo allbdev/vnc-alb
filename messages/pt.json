@@ -6,10 +6,10 @@
     "switchMode": "Trocar para o modo {mode}",
     "switchLocale": "Trocar para EN-us",
     "links": {
-      "1": "SOBRE",
-      "2": "EXPERIÊNCIA",
-      "3": "PROJETOS",
-      "4": "TECNOLOGIAS"
+      "1": "Sobre",
+      "2": "Experiência",
+      "3": "Projetos",
+      "4": "Tecnologias"
     }
   }
 }

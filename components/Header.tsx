@@ -62,7 +62,7 @@ const NavList: FC = () => {
 
   const mobileClassNames = useMemo(
     () => [
-      "list-none flex-col divide-y top-[100%] absolute left-0 right-0 ease-in md:sticky md:flex md:flex-row md:items-center md:gap-4 md:divide-y-0",
+      "z-99 list-none flex-col divide-y top-[100%] absolute left-0 right-0 ease-in md:sticky md:flex md:flex-row md:items-center md:gap-4 md:divide-y-0",
       isOpen ? "flex" : "hidden",
     ],
     [isOpen],
