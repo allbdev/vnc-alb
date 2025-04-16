@@ -11,7 +11,7 @@ import { LuLanguages, LuMenu, LuX } from "react-icons/lu";
 
 export const Header: FC = () => {
   return (
-    <header className="flex pt-3">
+    <header className="fixed top-0 z-50 w-full">
       <NavList />
     </header>
   );
@@ -62,7 +62,7 @@ const NavList: FC = () => {
 
   const mobileClassNames = useMemo(
     () => [
-      "z-99 list-none flex-col divide-y top-[100%] absolute left-0 right-0 ease-in md:sticky md:flex md:flex-row md:items-center md:gap-4 md:divide-y-0",
+      "z-99 list-none flex-col divide-y top-[100%] absolute left-0 right-0 ease-in md:sticky md:flex md:flex-row md:items-center md:gap-4 md:divide-y-0 bg-black p-2 text-white dark:bg-white dark:text-black",
       isOpen ? "flex" : "hidden",
     ],
     [isOpen],
@@ -77,7 +77,11 @@ const NavList: FC = () => {
   }, [isOpen]);
 
   return (
-    <nav className={"relative flex flex-1 items-center justify-between"}>
+    <nav
+      className={
+        "relative mx-auto flex w-[1020px] max-w-full flex-1 items-center justify-between bg-black p-2 text-white dark:bg-white dark:text-black md:mt-3 md:max-w-[90%]"
+      }
+    >
       <h1>{t.rich("title")}</h1>
       <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <LuX size={INCO_SIZE} /> : <LuMenu size={INCO_SIZE} />}

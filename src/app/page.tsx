@@ -1,11 +1,14 @@
 import React from "react";
-import { Header } from "@/components/Header";
+import { Header } from "@/src/components/Header";
+import { Banner } from "@/src/components/Banner";
 
 export default function Home() {
   return (
-    <div className={"mx-auto w-[1020px] max-w-[90%]"}>
+    <div>
       <Header />
-      <main></main>
+      <main>
+        <Banner />
+      </main>
     </div>
   );
 }

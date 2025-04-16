@@ -1,7 +1,7 @@
 import React from "react";
 import { expect, test, vitest } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { Header } from "@/components/Header";
+import { Header } from "@/src/components/Header";
 import { Render } from "../utils/render";
 
 test("Header", () => {

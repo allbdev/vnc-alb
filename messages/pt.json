@@ -11,5 +11,12 @@
       "3": "Projetos",
       "4": "Tecnologias"
     }
+  },
+  "banner": {
+    "title": "Olá",
+    "description": "Eu sou Vinícius Albuquerque, um Dev Frontend",
+    "button1": "SAIBA MAIS",
+    "button2": "ENTRE EM CONTATO",
+    "button3": "BAIXAR CURRÍCULO"
   }
 }

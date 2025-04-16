@@ -11,5 +11,12 @@
       "3": "Projects",
       "4": "Technologies"
     }
+  },
+  "banner": {
+    "title": "Hello",
+    "description": "I'm Vinícius Albuquerque a Fronted Engineer based in Brazil",
+    "button1": "MORE ABOUT ME",
+    "button2": "GET IN TOUCH",
+    "button3": "GET MY CV"
   }
 }
