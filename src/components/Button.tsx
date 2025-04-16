@@ -32,7 +32,7 @@ export const Button: FC<ButtonProps> = ({
       className={cn(
         className,
         props.className,
-        "p-6 rounded-none border-2 cursor-pointer border-solid transition-all",
+        "py-6 px-10 rounded-none border-2 cursor-pointer border-solid transition-all",
       )}
     >
       {children}

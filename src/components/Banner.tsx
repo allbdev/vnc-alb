@@ -9,7 +9,7 @@ import { email } from "@/src/utils";
 export const Banner = () => {
   const t = useTranslations("banner");
   return (
-    <div className="relative flex h-screen w-full">
+    <section className="relative flex h-screen w-full">
       <div className="z-[2] flex size-full flex-col justify-end p-14 text-[3rem] md:w-1/2">
         <span className="text-xl text-red-600">{t.rich("title")}</span>
         <h1>{t.rich("description")}</h1>
@@ -30,6 +30,6 @@ export const Banner = () => {
           aspecRatioProps={{ ratio: 1, className: "pb-[100vh]" }}
         />
       </div>
-    </div>
+    </section>
   );
 };
