@@ -1,8 +1,6 @@
 {
   "header": {
     "title": "Vinicius Albuquerque",
-    "based": "Based in<br></br>Espirito Santo, Brazil",
-    "email": "Say Hello<br></br>alb.develloper@gmail.com",
     "switchMode": "Switch to {mode} mode",
     "switchLocale": "Switch to PT-br",
     "links": {
@@ -18,5 +16,59 @@
     "button1": "MORE ABOUT ME",
     "button2": "GET IN TOUCH",
     "button3": "GET MY CV"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Hey, there! I'm Vinícius, a Frontend Software Engineer! I work with ReactJS, NextJS, and Typescript.<br></br><br></br>I started my career in the technology field early, right after I finished high school in 2017. I began working with computer maintenance, printers, and networking. While in that job, I started studying software development, initially with HTML, CSS, and Vanilla JavaScript, and soon I began working with React and React Native, which are my main working technologies. I also work with React Native for mobile development. <br></br><br></br>I am passionate about technology and turning ideas into real projects. I am always looking for a new challenge, believing that without difficulties, there is no learning. Nothing is impossible to develop; some things just take more time. An enthusiast of Go, NodeJS and Laravel, always learning new technologies.",
+    "experience": {
+      "title": "Experience",
+      "description": {
+        "position": "Frontend Engineer",
+        "company": "Bird",
+        "period": "Apr 2024 - present"
+      },
+      "description2": {
+        "position": "Senior Software Engineer",
+        "company": "Multti",
+        "period": "Jan 2022 - Apr 2024"
+      },
+      "description3": {
+        "position": "Software Engineer",
+        "company": "Solution4Apps",
+        "period": "Jan 2020 - Jan 2022"
+      }
+    },
+    "education": {
+      "title": "Education",
+      "description": {
+        "degree": "Bachelor's degree Computer Science",
+        "university": "UVV",
+        "period": "2023 - 2027 (Expected)"
+      },
+      "description2": {
+        "degree": "Specialization in NextJS, ReactJS, React Native, Typescript",
+        "university": "RocketSeat",
+        "period": "2020 - 2021"
+      },
+      "description3": {
+        "degree": "Specialization in ReactJS, React Native",
+        "university": "Fábrica de Aplicativos",
+        "period": "2020 - 2020"
+      },
+      "description4": {
+        "degree": "Specialization in HTML, CSS, JavaScript",
+        "university": "UpInside treinamentos",
+        "period": "2019 - 2020"
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "React",
+      "description2": "React Native",
+      "description3": "NextJS",
+      "description4": "Typescript",
+      "description5": "NodeJS",
+      "description6": "Go"
+    }
   }
 }

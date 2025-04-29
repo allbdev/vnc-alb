@@ -1,8 +1,6 @@
 {
   "header": {
     "title": "Vinicius Albuquerque",
-    "based": "Moro em<br></br>Espirito Santo, Brasil",
-    "email": "Entre em contato<br></br>alb.develloper@gmail.com",
     "switchMode": "Trocar para o modo {mode}",
     "switchLocale": "Trocar para EN-us",
     "links": {
@@ -14,9 +12,63 @@
   },
   "banner": {
     "title": "Olá",
-    "description": "Eu sou Vinícius Albuquerque, um Dev Frontend",
+    "description": "Eu sou Vinícius Albuquerque, um Engenheiro de Software",
     "button1": "SAIBA MAIS",
     "button2": "ENTRE EM CONTATO",
     "button3": "BAIXAR CURRÍCULO"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Olá, sou Vinícius Albuquerque, um Engenheiro de Software Frontend! Trabalho com ReactJS, NextJS e Typescript.<br></br><br></br>Comecei minha carreira na tecnologia logo após terminar o ensino médio em 2017. Iniciei trabalhando com manutenção de computadores, impressoras e redes de computadores. Enquanto nesse emprego, comecei a estudar desenvolvimento de software, inicialmente com HTML, CSS e Vanilla JavaScript, e logo comecei a trabalhar com React e React Native, que são minhas tecnologias principais de trabalho. Também trabalho com React Native para desenvolvimento mobile. <br></br><br></br>Sou apaixonado por tecnologia e transformando ideias em projetos reais. Sempre busco um novo desafio, acreditando que sem dificuldades, não há aprendizado. Nada é impossível de desenvolver; algumas coisas só demoram mais. Entusiasta de Go, NodeJS e Laravel, sempre aprendendo novas tecnologias.",
+    "experience": {
+      "title": "Experiência",
+      "description": {
+        "position": "Engenheiro de Software Frontend",
+        "company": "Bird",
+        "period": "Abr 2024 - presente"
+      },
+      "description2": {
+        "position": "Engenheiro de Software Senior",
+        "company": "Multti",
+        "period": "Jan 2022 - Abr 2024"
+      },
+      "description3": {
+        "position": "Engenheiro de Software",
+        "company": "Solution4Apps",
+        "period": "Jan 2020 - Jan 2022"
+      }
+    },
+    "education": {
+      "title": "Educação",
+      "description": {
+        "degree": "Bacharelado em Ciência da Computação",
+        "university": "UVV",
+        "period": "2023 - 2027 (Esperado)"
+      },
+      "description2": {
+        "degree": "Especialização em NextJS, ReactJS, React Native, Typescript",
+        "university": "RocketSeat",
+        "period": "2020 - 2021"
+      },
+      "description3": {
+        "degree": "Especialização em ReactJS, React Native",
+        "university": "Fábrica de Aplicativos",
+        "period": "2020 - 2020"
+      },
+      "description4": {
+        "degree": "Especialização em HTML, CSS, JavaScript",
+        "university": "UpInside treinamentos",
+        "period": "2019 - 2020"
+      }
+    },
+    "skills": {
+      "title": "Habilidades",
+      "description": "React",
+      "description2": "React Native",
+      "description3": "NextJS",
+      "description4": "Typescript",
+      "description5": "NodeJS",
+      "description6": "Go"
+    }
   }
 }
